@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diamond zone - Top up games</title>
+    <title>Diamond Zone - Top Up Game</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,26 +13,39 @@
 
     <header class="header">
         <div class="container flex justify-between items-center">
-            <div class="logo-container">
-                <h1>Diamond zone</h1>
-            </div>
+            <h1 class="store-name">DIAMOND ZONE</h1>
             <nav class="nav">
                 <a href="#home">BERANDA</a>
                 <a href="#games">PRODUK</a>
                 <a href="#about">TENTANG KAMI</a>
+                <a href="#payments">PEMBAYARAN</a>
                 <a href="#contact">KONTAK</a>
             </nav>
         </div>
     </header>
 
     <main class="main-content">
+        <!-- Banner Section -->
+        <section id="home" class="banner-section">
+            <div id="star-background"></div>
+            <div class="slider-container">
+                <div class="slider" id="image-slider">
+                    <!-- Tambahkan gambar banner Anda di sini. Contoh: -->
+                    <img src="https://placehold.co/1000x300/6A0DAD/ffffff?text=BANNER+1" alt="Banner 1">
+                    <img src="https://placehold.co/1000x300/6A0DAD/ffffff?text=BANNER+2" alt="Banner 2">
+                </div>
+                <button class="slider-prev" onclick="moveSlider(-1)">&#10094;</button>
+                <button class="slider-next" onclick="moveSlider(1)">&#10095;</button>
+            </div>
+        </section>
+
         <!-- Games Section -->
         <section id="games" class="section">
             <div class="container">
                 <h2 class="section-title">PILIH GAME</h2>
                 <div class="game-container">
                     <div class="game-card" onclick="showModal('mobile-legends')">
-                        <img src="mlbb.jpg" alt="Mobile Legends">
+                        <img src="mlbb.jpg" alt="Mobile legend">
                         <h3>Mobile Legends</h3>
                     </div>
                     <div class="game-card" onclick="showModal('free-fire')">
@@ -40,7 +53,7 @@
                         <h3>Garena Free Fire</h3>
                     </div>
                     <div class="game-card" onclick="showModal('roblox')">
-                        <img src="robloc.jpg" alt="Roblox">
+                        <img src="robloc.jgp" alt="Roblox">
                         <h3>Roblox</h3>
                     </div>
                 </div>
@@ -52,11 +65,23 @@
             <div class="container about-us">
                 <h2 class="section-title">TENTANG KAMI</h2>
                 <p>
-                    Diamond zone adalah destinasi terpercaya Anda untuk semua kebutuhan top-up game. Kami menyediakan layanan top-up diamond yang cepat, aman, dan harga bersaing untuk game-game favorit seperti Mobile Legends, Garena Free Fire, dan Roblox. Misi kami adalah memberikan pengalaman top-up terbaik bagi para gamer di seluruh Indonesia. dan kami sering kali memberikan diskon melalui media sosial. 
+                    Diamond Zone adalah destinasi terpercaya Anda untuk semua kebutuhan top-up game. Kami menyediakan layanan top-up diamond yang cepat, aman, dan harga bersaing untuk game-game favorit. Misi kami adalah memberikan pengalaman top-up terbaik bagi para gamer.
                 </p>
                 <p>
-                    Kami berkomitmen untuk selalu memberikan layanan pelanggan yang prima. Jika Anda memiliki pertanyaan atau butuh bantuan, jangan ragu untuk menghubungi kami. Selamat berbelanja di Diamond zone! 
+                    Kami berkomitmen untuk selalu memberikan layanan pelanggan yang prima. Jika Anda memiliki pertanyaan atau butuh bantuan, jangan ragu untuk menghubungi kami. Selamat berbelanja di Diamond Zone!
                 </p>
+            </div>
+        </section>
+
+        <!-- Payment Section -->
+        <section id="payments" class="section">
+            <div class="container payments">
+                <h2 class="section-title">METODE PEMBAYARAN</h2>
+                <div class="payment-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Go-pay_logo.svg/1200px-Go-pay_logo.svg.png" alt="GoPay" class="payment-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/DANA.svg/1200px-DANA.svg.png" alt="DANA" class="payment-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/OVO_Logo.svg/1200px-OVO_Logo.svg.png" alt="OVO" class="payment-logo">
+                </div>
             </div>
         </section>
         
@@ -68,10 +93,10 @@
                     Hubungi kami dan temukan promo menarik di media sosial kami!
                 </p>
                 <div class="social-media-container">
-                    <a href="https://wa.me/6281410545261" target="_blank" class="social-button whatsapp-button">
+                    <a href="https://wa.me/621410545261" target="_blank" class="social-button whatsapp-button">
                         <img src="wa.jpg" alt="WhatsApp"> WhatsApp
                     </a>
-                    <a href="https://www.instagram.com/diamond_zone45?igsh=MTIyOWpqMnR3NHF1aA==" target="_blank" class="social-button instagram-button">
+                    <a href="https://www.instagram.com/diamond_zone45" target="_blank" class="social-button instagram-button">
                         <img src="ig.jpg" alt="Instagram"> Instagram
                     </a>
                     <a href="https://www.tiktok.com/@diamond.zone35" target="_blank" class="social-button tiktok-button">
@@ -96,9 +121,9 @@
     </div>
 
     <script>
-        const myPhoneNumber = "6281410545261"; // Ganti dengan nomor WhatsApp Anda
-        const myInstagramLink = "https://www.instagram.com/diamond_zone45?igsh=MTIyOWpqMnR3NHF1aA=="; // Ganti dengan link Instagram Anda
-        const myTiktokLink = "https://www.tiktok.com/@diamond.zone35"; // Ganti dengan link TikTok Anda
+        const myPhoneNumber = "621410545261";
+        const myInstagramLink = "https://www.instagram.com/diamond_zone45";
+        const myTiktokLink = "https://www.tiktok.com/@diamond.zone35";
 
         const gamesData = {
             "mobile-legends": {
@@ -113,13 +138,15 @@
                     "875 Diamond : Rp 230.000", 
                     "1048 Diamond : Rp 270.000", 
                     "1159 Diamond : Rp 299.500", 
-                    " Wdp : Rp 28.000", 
+                ],
+                otherPrices: [
+                    "Wdp : Rp 28.000"
                 ]
             },
             "free-fire": {
                 name: "Garena Free Fire",
                 prices: [
-                    "5 Diamond : Rp1. 000", 
+                    "5 Diamond : Rp 1.000", 
                     "12 Diamond : Rp 2.000", 
                     "50 Diamond : Rp 8.000", 
                     "70 Diamond : Rp 10.000", 
@@ -127,10 +154,12 @@
                     "355 Diamond : Rp 48.000", 
                     "720 Diamond : Rp 98.000", 
                     "1450 Diamond : Rp 201.000", 
-                    "2180 Diamond : Rp 302.000", 
+                    "2180 Diamond : Rp 302.000"
+                ],
+                otherPrices: [
                     "Membership mingguan lite : Rp 15.000", 
-                    "Membership minguan biasa : Rp 30.000", 
-                    "Membership bulanan : Rp 86.000", 
+                    "Membership mingguan biasa : Rp 30.000", 
+                    "Membership bulanan : Rp 86.000"
                 ]
             },
             "roblox": {
@@ -142,7 +171,7 @@
                             "400 Robux  : Rp 85.000", 
                             "800 Robux  : Rp 159.000", 
                             "1600 Robux : Rp 310.000", 
-                            "400 Robux : Rp 762.000", 
+                            "4000 Robux : Rp 762.000"
                         ]
                     },
                     {
@@ -158,7 +187,6 @@
                             "800 Robux : Rp 106.000", 
                             "900 Robux : Rp 120.000", 
                             "1000 Robux : Rp 133.000", 
-
                         ]
                     }
                 ]
@@ -186,20 +214,24 @@
                         priceList.appendChild(p);
                     });
                 });
-
-                const whatsappMessage = `Halo min, saya ingin top-up Roblox!\n\n${game.prices.map(category => `${category.title}:\n${category.items.map(item => `- ${item}`).join('\n')}`).join('\n\n')}\n\nMohon dibantu ya.`;
-                whatsappLink.href = `https://wa.me/${6281410545261}?text=${encodeURIComponent(whatsappMessage)}`;
             } else {
                 game.prices.forEach(item => {
                     const p = document.createElement('p');
                     p.textContent = item;
                     priceList.appendChild(p);
                 });
-
-                const whatsappMessage = `Halo min, saya ingin top-up ${game.name}!%0A%0A${game.prices.map(item => `- ${item}`).join('%0A')}%0AMohon dibantu ya.`;
-                whatsappLink.href = `https://wa.me/${6281410545261}?text=${encodeURIComponent(whatsappMessage)}`;
+                if (game.otherPrices && game.otherPrices.length > 0) {
+                     const separator = document.createElement('hr');
+                     priceList.appendChild(separator);
+                     game.otherPrices.forEach(item => {
+                        const p = document.createElement('p');
+                        p.textContent = item;
+                        priceList.appendChild(p);
+                     });
+                }
             }
             
+            whatsappLink.href = `https://wa.me/${myPhoneNumber}`;
             modal.style.display = 'block';
         }
 
@@ -212,6 +244,39 @@
                 closeModal();
             }
         }
+    </script>
+    <script>
+        let slideIndex = 0;
+        const slider = document.getElementById('image-slider');
+        const stars = document.getElementById('star-background');
+
+        function moveSlider(n) {
+            slideIndex += n;
+            const slides = slider.children.length;
+            if (slideIndex >= slides) { slideIndex = 0; }
+            if (slideIndex < 0) { slideIndex = slides - 1; }
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const newPosition = -slideIndex * 100;
+            slider.style.transform = `translateX(${newPosition}%)`;
+        }
+
+        function createStars() {
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                stars.appendChild(star);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createStars();
+        });
     </script>
 </body>
 </html>
