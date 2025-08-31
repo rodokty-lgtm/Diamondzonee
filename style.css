@@ -1,11 +1,11 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #1a1a2e;
+    background-color: #0f0f1a;
     color: #fff;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #11111f 100%);
     scroll-behavior: smooth;
 }
 
@@ -118,62 +118,6 @@ body {
     border-radius: 2px;
 }
 
-/* Banner Slider Styling */
-.banner-section {
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.banner-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    font-style: italic;
-    opacity: 0.8;
-}
-
-.banner-slider {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-}
-
-.banner-image {
-    width: 100%;
-    height: auto;
-    display: none;
-    transition: opacity 0.5s ease-in-out;
-}
-.banner-image.active {
-    display: block;
-}
-
-.slider-dots {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-}
-
-.dot {
-    height: 12px;
-    width: 12px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.dot.active, .dot:hover {
-    background-color: #00ff99;
-}
-
 .game-container {
     display: flex;
     justify-content: center;
@@ -280,6 +224,12 @@ body {
     font-weight: 700;
 }
 
+#price-list h4 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #00ff99;
+}
+
 #price-list p {
     background-color: #2a2a4a;
     padding: 15px;
@@ -317,6 +267,46 @@ body {
     background: #128c7e;
 }
 
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button {
+    background: #25d366;
+}
+.instagram-button {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.tiktok-button {
+    background: #000;
+}
+
+.social-button img {
+    width: 24px;
+    height: 24px;
+}
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -344,4 +334,4 @@ body {
         width: 80%;
         max-width: 300px;
     }
-}
+                                 }
