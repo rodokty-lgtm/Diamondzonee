@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeynoStore - Top Up Diamond</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <div class="logo-container">
+                <img src="https://placehold.co/100x40/0f0f1a/ffffff?text=ZEYNO" alt="Logo Toko" class="logo">
+                <h1>ZeynoStore</h1>
+            </div>
+            <nav class="nav">
+                <a href="#home">BERANDA</a>
+                <a href="#games">PRODUK</a>
+                <a href="#about">TENTANG KAMI</a>
+                <a href="#contact">KONTAK</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="container">
+                <!-- Banner Slider Section -->
+                <div class="banner-section">
+                    <h3 class="banner-title">Klik Disini Untuk Slide Gambar</h3>
+                    <div class="banner-slider" id="banner-slider">
+                        <img src="https://placehold.co/900x350/1a1a2e/ffffff?text=BANNER+1" alt="Banner 1" class="banner-image active">
+                        <img src="https://placehold.co/900x350/2a2a4a/ffffff?text=BANNER+2" alt="Banner 2" class="banner-image">
+                        <img src="https://placehold.co/900x350/0f0f1a/ffffff?text=BANNER+3" alt="Banner 3" class="banner-image">
+                        <div class="slider-dots">
+                            <span class="dot active" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games" class="section">
+            <div class="container">
+                <h2 class="section-title">PILIH GAME</h2>
+                <div class="game-container">
+                    <div class="game-card" onclick="showModal('mobile-legends')">
+                        <img src="https://placehold.co/400x400/800080/ffffff?text=Mobile+Legends" alt="Mobile Legends">
+                        <h3>Mobile Legends</h3>
+                    </div>
+                    <div class="game-card" onclick="showModal('free-fire')">
+                        <img src="https://placehold.co/400x400/007bff/ffffff?text=Garena+Free+Fire" alt="Garena Free Fire">
+                        <h3>Garena Free Fire</h3>
+                    </div>
+                    <div class="game-card" onclick="showModal('roblox')">
+                        <img src="https://placehold.co/400x400/000000/ffffff?text=Roblox" alt="Roblox">
+                        <h3>Roblox</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section">
+            <div class="container about-us">
+                <h2 class="section-title">TENTANG KAMI</h2>
+                <p>
+                    ZeynoStore adalah destinasi terpercaya Anda untuk semua kebutuhan top-up game. Kami menyediakan layanan top-up diamond yang cepat, aman, dan harga bersaing untuk game-game favorit seperti Mobile Legends, Garena Free Fire, dan Roblox. Misi kami adalah memberikan pengalaman top-up terbaik bagi para gamer di seluruh Indonesia.
+                </p>
+                <p>
+                    Kami berkomitmen untuk selalu memberikan layanan pelanggan yang prima. Jika Anda memiliki pertanyaan atau butuh bantuan, jangan ragu untuk menghubungi kami. Selamat berbelanja di ZeynoStore!
+                </p>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container contact-us">
+                <h2 class="section-title">KONTAK KAMI</h2>
+                <p>
+                    Hubungi kami melalui WhatsApp untuk pemesanan dan pertanyaan.
+                </p>
+                <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12.01 2.011s6.989 3.495 6.989 9.989c0 3.864-1.5 7.425-4.5 9.989l-2.489 1.401v-3.793l-4.501 2.292s.193-4.398-2.699-7.101c-2.703-2.703-7.101-2.699-7.101-2.699s4.398.193 7.101 2.699c2.703 2.703 2.699 7.101 2.699 7.101s2.292-4.501 2.292-4.501v-2.489l1.401-2.489z"/>
+                    </svg>
+                    WhatsApp Kami
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal -->
+    <div id="price-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title"></h3>
+            <div id="price-list"></div>
+            <a id="whatsapp-link" href="#" target="_blank" class="whatsapp-button">
+                Pesan Sekarang
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const myPhoneNumber = "6281234567890"; // Ganti dengan nomor WhatsApp Anda
+
+        const gamesData = {
+            "mobile-legends": {
+                name: "Mobile Legends",
+                prices: [
+                    "86 Diamond : Rp 20.000",
+                    "172 Diamond : Rp 35.000",
+                    "257 Diamond : Rp 50.000",
+                    "344 Diamond : Rp 65.000",
+                    "Monthly Pass : Rp 25.000",
+                ]
+            },
+            "free-fire": {
+                name: "Garena Free Fire",
+                prices: [
+                    "140 Diamond : Rp 20.000",
+                    "210 Diamond : Rp 30.000",
+                    "280 Diamond : Rp 40.000",
+                    "355 Diamond : Rp 50.000",
+                    "Weekly Pass : Rp 30.000",
+                ]
+            },
+            "roblox": {
+                name: "Roblox",
+                prices: [
+                    "80 Robux : Rp 15.000",
+                    "400 Robux : Rp 70.000",
+                    "800 Robux : Rp 130.000",
+                ]
+            }
+        };
+
+        const modal = document.getElementById('price-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const priceList = document.getElementById('price-list');
+        const whatsappLink = document.getElementById('whatsapp-link');
+        
+        const bannerImages = document.querySelectorAll('.banner-image');
+        const dots = document.querySelectorAll('.dot');
+        let slideIndex = 1;
+
+        function showModal(gameKey) {
+            const game = gamesData[gameKey];
+            modalTitle.textContent = `HARGA ${game.name.toUpperCase()}`;
+            priceList.innerHTML = game.prices.map(item => `<p>${item}</p>`).join('');
+            
+            const whatsappMessage = `Halo, saya ingin top-up ${game.name}!%0A%0A${game.prices.map(item => `- ${item}`).join('%0A')}%0AMohon dibantu ya.`;
+            whatsappLink.href = `https://wa.me/${myPhoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        function showSlides(n) {
+            if (n > bannerImages.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = bannerImages.length;
+            }
+            for (let i = 0; i < bannerImages.length; i++) {
+                bannerImages[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            bannerImages[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        document.getElementById('banner-slider').addEventListener('click', () => plusSlides(1));
+        
+        showSlides(slideIndex);
+    </script>
+</body>
+</html>
+
