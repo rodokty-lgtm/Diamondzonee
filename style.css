@@ -48,6 +48,8 @@ body {
     height: 50px;
     border-radius: 50%;
     border: 2px solid #00ff99;
+    /* Menambahkan aturan ini agar gambar logo dengan rasio 1:1 terlihat baik */
+    object-fit: contain;
 }
 
 .header h1 {
@@ -334,4 +336,4 @@ body {
         width: 80%;
         max-width: 300px;
     }
-                                 }
+}
