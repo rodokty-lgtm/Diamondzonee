@@ -1,7 +1,7 @@
 // JavaScript Logic for Diamond Zone
 
 // GANTI DENGAN NOMOR WHATSAPP ANDA
-const whatsappNumber = "6281410545262"; 
+const whatsappNumber = "6281410545261"; 
 
 // Data harga untuk setiap game
 const gamesData = {
