@@ -120,7 +120,7 @@ const gamesData = {
 
 // GANTI LINK DI BAWAH INI DENGAN AKUN MEDIA SOSIAL ANDA
 const socialLinks = {
-    instagram: "https://www.instagram.com/diamond_zone45",
+    instagram: "https://www.instagram.com/diamond_zone45?igsh=MTIyOWpqMnR3NHF1aA==",
     tiktok: "https://www.tiktok.com/@diamond.zone35",
     facebook: "https://www.facebook.com/diamond zonee"
 };
