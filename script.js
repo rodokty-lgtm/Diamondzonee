@@ -81,8 +81,8 @@ const gamesData = {
     },
     'gt': {
         'Gems': [
-            { 'nominal': '300 Gems', 'price': 'Rp 30.000' },
-            { 'nominal': '1200 Gems', 'price': 'Rp 155.000' }
+            { 'nominal': '3000 Gems', 'price': 'Rp 50.000' },
+            { 'nominal': '6000 Gems', 'price': 'Rp 100.000' }
         ],
         'Bundle': [
             { 'nominal': 'Bundle Starter S3', 'price': 'Rp 277.000' },
@@ -122,7 +122,7 @@ const gamesData = {
 const socialLinks = {
     instagram: "https://www.instagram.com/diamond_zone45",
     tiktok: "https://www.tiktok.com/@diamond.zone35",
-    facebook: "https://www.facebook.com/share/1FYTRc1fKe/"
+    facebook: "https://www.facebook.com/diamond zonee"
 };
 
 let selectedGame, selectedNominal, selectedPrice;
