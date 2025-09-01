@@ -1,7 +1,6 @@
 // JavaScript Logic for Diamond Zone
 
-// WhatsApp number and game data
-const whatsappNumber = "6281410545261"; 
+const whatsappNumber = "628123456789"; 
 const gamesData = {
     'mlbb': {
         'Diamonds': [
@@ -116,6 +115,13 @@ const gamesData = {
     ]
 };
 
+// Social media links. Please replace with your actual links.
+const socialLinks = {
+    instagram: "https://www.instagram.com/your_instagram",
+    tiktok: "https://www.tiktok.com/@your_tiktok",
+    facebook: "https://www.facebook.com/your_facebook"
+};
+
 let selectedGame, selectedNominal, selectedPrice;
 
 // Banner Carousel Logic
@@ -141,7 +147,6 @@ prevBtn.addEventListener('click', () => {
     updateBanner();
 });
 
-// Update banner on window resize
 window.addEventListener('resize', updateBanner);
 
 // Modal and ordering logic
@@ -240,7 +245,7 @@ function placeOrder() {
     }
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${6281410545261}?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
 }
 
@@ -269,6 +274,13 @@ function showMessageBox(message) {
         }
     };
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Set social media links
+    document.getElementById('instagram-link').href = socialLinks.instagram;
+    document.getElementById('tiktok-link').href = socialLinks.tiktok;
+    document.getElementById('facebook-link').href = socialLinks.facebook;
+});
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
