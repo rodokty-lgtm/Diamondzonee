@@ -1,33 +1,24 @@
-/*
- * Diamond Zone - Custom Styles
- * * This file contains custom CSS rules for the Diamond Zone website.
- * It's used in conjunction with Tailwind CSS to define the overall look and feel.
- */
-
-/* Font and Background */
+/* Diamond Zone - Custom Styles */
 body {
     font-family: 'Inter', sans-serif;
-    /* This gradient gives the modern and attractive background */
     background-image: linear-gradient(to bottom right, #eef2ff, #a797ff);
     color: #1f2937;
 }
 
-/* Navbar Links */
 .nav-link {
-    color: #4b5563; /* text-gray-600 */
+    color: #4b5563;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #1f2937; /* hover:text-gray-900 */
+    color: #1f2937;
 }
 
-/* Card Styling */
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #ffffff;
-    border-radius: 0.75rem; /* rounded-xl */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     overflow: hidden;
 }
 
@@ -36,7 +27,6 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* WhatsApp Button */
 .whatsapp-btn {
     background-color: #25D366;
     color: white;
@@ -47,7 +37,6 @@ body {
     background-color: #128C7E;
 }
 
-/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -90,18 +79,15 @@ body {
     cursor: pointer;
 }
 
-/* Social Links */
 .social-link {
-    color: #4b5563; /* text-gray-600 */
+    color: #4b5563;
     transition: color 0.3s ease;
 }
 
 .social-link:hover {
-    color: #1f2937; /* hover:text-gray-900 */
+    color: #1f2937;
 }
 
-/* Banner Carousel */
 #banner-container {
-    width: 200%; /* For two banners to be side-by-side */
+    width: 200%;
 }
-
