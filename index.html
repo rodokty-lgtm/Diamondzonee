@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-br from-blue-200 to-purple-300 text-gray-800">
+<body class="bg-gradient-to-br from-blue-100 via-sky-200 to-blue-300 text-gray-800">
 
     <!-- Navbar -->
     <header class="bg-white shadow-lg fixed top-0 w-full z-50">
@@ -19,6 +19,7 @@
                 <a href="#products" class="nav-link">Produk</a>
                 <a href="#how-to-buy" class="nav-link">Cara Membeli</a>
                 <a href="#social" class="nav-link">Media Sosial</a>
+                <a href="#payments" class="nav-link">Pembayaran</a>
                 <a href="#about" class="nav-link">Tentang Kami</a>
             </div>
         </nav>
@@ -30,8 +31,12 @@
         <!-- Banner Carousel -->
         <section id="banner" class="mb-8 relative overflow-hidden rounded-xl shadow-lg">
             <div id="banner-container" class="flex transition-transform duration-500 ease-in-out">
-                <img src="https://placehold.co/1200x400/3498db/ffffff?text=Promo+Spesial+1" alt="Promo Banner 1" class="w-full h-auto object-cover flex-shrink-0">
-                <img src="https://placehold.co/1200x400/9b59b6/ffffff?text=Promo+Spesial+2" alt="Promo Banner 2" class="w-full h-auto object-cover flex-shrink-0">
+                <div class="w-full flex-shrink-0">
+                    <img src="Img1.jpg" alt="Promo Banner 1" class="w-full h-auto object-cover rounded-xl">
+                </div>
+                <div class="w-full flex-shrink-0">
+                    <img src="Img2.jpg" alt="Promo Banner 2" class="w-full h-auto object-cover rounded-xl">
+                </div>
             </div>
             <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10 opacity-75 hover:opacity-100">&lt;</button>
             <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10 opacity-75 hover:opacity-100">&gt;</button>
@@ -43,21 +48,21 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 <!-- Game Card -->
                 <div class="card cursor-pointer" onclick="openModal('Mobile Legends', 'mlbb')">
-                    <img src="https://placehold.co/400x400/eeeeee/333333?text=MLBB" alt="Mobile Legends" class="w-full h-auto rounded-t-xl">
+                    <img src="mlbb.jpg" alt="Mobile Legends" class="w-full h-auto rounded-t-xl">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">Mobile Legends</h3>
                     </div>
                 </div>
                 <!-- Game Card -->
                 <div class="card cursor-pointer" onclick="openModal('Free Fire', 'ff')">
-                    <img src="https://placehold.co/400x400/eeeeee/333333?text=Free+Fire" alt="Free Fire" class="w-full h-auto rounded-t-xl">
+                    <img src="ff.jpg" alt="Free Fire" class="w-full h-auto rounded-t-xl">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">Free Fire</h3>
                     </div>
                 </div>
                 <!-- Game Card -->
                 <div class="card cursor-pointer" onclick="openModal('Roblox', 'roblox')">
-                    <img src="https://placehold.co/400x400/eeeeee/333333?text=Roblox" alt="Roblox" class="w-full h-auto rounded-t-xl">
+                    <img src="rbx.jpg" alt="Roblox" class="w-full h-auto rounded-t-xl">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">Roblox</h3>
                     </div>
@@ -73,49 +78,49 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 <!-- More game cards... -->
                 <div class="card cursor-pointer" onclick="openModal('Mobile Legends', 'mlbb')">
-                    <img src="https://placehold.co/400x400/eeeeee/333333?text=MLBB" alt="Mobile Legends" class="w-full h-auto rounded-t-xl">
+                    <img src="mlbb.jpg" alt="Mobile Legends" class="w-full h-auto rounded-t-xl">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">Mobile Legends</h3>
                     </div>
                 </div>
                 <div class="card cursor-pointer" onclick="openModal('Free Fire', 'ff')">
-                    <img src="https://placehold.co/400x400/eeeeee/333333?text=Free+Fire" alt="Free Fire" class="w-full h-auto rounded-t-xl">
+                    <img src="ff.jpg" alt="Free Fire" class="w-full h-auto rounded-t-xl">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">Free Fire</h3>
                     </div>
                 </div>
                 <div class="card cursor-pointer" onclick="openModal('Roblox', 'roblox')">
-                    <img src="https://placehold.co/400x400/eeeeee/333333?text=Roblox" alt="Roblox" class="w-full h-auto rounded-t-xl">
+                    <img src="rbx.jpg" alt="Roblox" class="w-full h-auto rounded-t-xl">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">Roblox</h3>
                     </div>
                 </div>
                 <div class="card cursor-pointer" onclick="openModal('FC Mobile', 'fcm')">
-                    <img src="https://placehold.co/400x400/eeeeee/333333?text=FC+Mobile" alt="FC Mobile" class="w-full h-auto rounded-t-xl">
+                    <img src="fc.jpg" alt="FC Mobile" class="w-full h-auto rounded-t-xl">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">FC Mobile</h3>
                     </div>
                 </div>
                 <div class="card cursor-pointer" onclick="openModal('Guardian Tales', 'gt')">
-                    <img src="https://placehold.co/400x400/eeeeee/333333?text=GT" alt="Guardian Tales" class="w-full h-auto rounded-t-xl">
+                    <img src="gt.jpg" alt="Guardian Tales" class="w-full h-auto rounded-t-xl">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">Guardian Tales</h3>
                     </div>
                 </div>
                 <div class="card cursor-pointer" onclick="openModal('Honor of Kings', 'hok')">
-                    <img src="https://placehold.co/400x400/eeeeee/333333?text=HoK" alt="Honor of Kings" class="w-full h-auto rounded-t-xl">
+                    <img src="hok.jpg" alt="Honor of Kings" class="w-full h-auto rounded-t-xl">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">Honor of Kings</h3>
                     </div>
                 </div>
                 <div class="card cursor-pointer" onclick="openModal('COD Mobile', 'cod')">
-                    <img src="https://placehold.co/400x400/eeeeee/333333?text=COD" alt="COD Mobile" class="w-full h-auto rounded-t-xl">
+                    <img src="cod.jpg" alt="COD Mobile" class="w-full h-auto rounded-t-xl">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">COD Mobile</h3>
                     </div>
                 </div>
                 <div class="card cursor-pointer" onclick="openModal('PUBG Mobile', 'pubg')">
-                    <img src="https://placehold.co/400x400/eeeeee/333333?text=PUBG" alt="PUBG Mobile" class="w-full h-auto rounded-t-xl">
+                    <img src="pubg.jpg" alt="PUBG Mobile" class="w-full h-auto rounded-t-xl">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">PUBG Mobile</h3>
                     </div>
@@ -137,6 +142,17 @@
                 <li>Konfirmasi pesanan Anda di WhatsApp dan lakukan pembayaran.</li>
                 <li>Diamond/item game akan segera masuk ke akun Anda.</li>
             </ol>
+        </section>
+
+        <!-- Payment Methods Section -->
+        <section id="payments" class="my-16 bg-white p-8 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Metode Pembayaran</h2>
+            <p class="text-gray-600 mb-4">Kami menerima pembayaran melalui:</p>
+            <div class="flex flex-wrap justify-center items-center gap-6">
+                <img src="dana.jpg" alt="Logo DANA" class="h-10">
+                <img src="gopay.jpg" alt="Logo GoPay" class="h-10">
+                <img src="ovo.jpg" alt="Logo OVO" class="h-10">
+            </div>
         </section>
 
         <!-- Social Media Section -->
@@ -172,18 +188,18 @@
 
     <!-- Modal for Top Up -->
     <div id="topUpModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content bg-gradient-to-br from-blue-500 to-indigo-600 text-white">
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <h2 id="modalTitle" class="text-2xl font-bold mb-4 text-center">Top Up Game</h2>
 
             <!-- Input ID Section -->
-            <div id="idInputSection" class="mb-6 p-4 bg-gray-100 rounded-lg">
+            <div id="idInputSection" class="mb-6 p-4 bg-gray-900 bg-opacity-30 rounded-lg">
                 <p class="font-semibold mb-2">1. Masukkan ID Akun</p>
-                <input id="userIdInput" type="text" placeholder="Masukkan ID" class="w-full px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <input id="userIdInput" type="text" placeholder="Masukkan ID" class="w-full px-4 py-2 rounded-lg bg-gray-700 bg-opacity-50 text-white focus:outline-none focus:ring-2 focus:ring-sky-400">
             </div>
 
             <!-- Diamond Options Section -->
-            <div class="p-4 bg-gray-100 rounded-lg">
+            <div class="p-4 bg-gray-900 bg-opacity-30 rounded-lg">
                 <h3 id="nominalTitle" class="font-semibold mb-4">Pilih Nominal</h3>
                 <div id="optionsContainer">
                     <!-- Options will be injected by JavaScript -->
@@ -199,4 +215,4 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
