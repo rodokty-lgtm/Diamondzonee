@@ -1,6 +1,9 @@
 // JavaScript Logic for Diamond Zone
 
-const whatsappNumber = "628123456789"; 
+// GANTI DENGAN NOMOR WHATSAPP ANDA
+const whatsappNumber = "6281410545262"; 
+
+// Data harga untuk setiap game
 const gamesData = {
     'mlbb': {
         'Diamonds': [
@@ -78,8 +81,8 @@ const gamesData = {
     },
     'gt': {
         'Gems': [
-            { 'nominal': '3000 Gems', 'price': 'Rp 50.000' },
-            { 'nominal': '6000 Gems', 'price': 'Rp 100.000' }
+            { 'nominal': '300 Gems', 'price': 'Rp 30.000' },
+            { 'nominal': '1200 Gems', 'price': 'Rp 155.000' }
         ],
         'Bundle': [
             { 'nominal': 'Bundle Starter S3', 'price': 'Rp 277.000' },
@@ -115,41 +118,29 @@ const gamesData = {
     ]
 };
 
-// Social media links. Please replace with your actual links.
+// GANTI LINK DI BAWAH INI DENGAN AKUN MEDIA SOSIAL ANDA
 const socialLinks = {
-    instagram: "https://www.instagram.com/your_instagram",
-    tiktok: "https://www.tiktok.com/@your_tiktok",
-    facebook: "https://www.facebook.com/your_facebook"
+    instagram: "https://www.instagram.com/diamond_zone45",
+    tiktok: "https://www.tiktok.com/@diamond.zone35",
+    facebook: "https://www.facebook.com/share/1FYTRc1fKe/"
 };
 
 let selectedGame, selectedNominal, selectedPrice;
 
-// Banner Carousel Logic
-let currentBanner = 0;
+// Logika Carousel Banner
 const bannerContainer = document.getElementById('banner-container');
-const banners = bannerContainer.querySelectorAll('img');
-const totalBanners = banners.length;
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 
-function updateBanner() {
-    const bannerWidth = bannerContainer.offsetWidth / totalBanners;
-    bannerContainer.style.transform = `translateX(${-currentBanner * bannerWidth}px)`;
-}
-
 nextBtn.addEventListener('click', () => {
-    currentBanner = (currentBanner + 1) % totalBanners;
-    updateBanner();
+    bannerContainer.scrollBy({ left: bannerContainer.offsetWidth, behavior: 'smooth' });
 });
 
 prevBtn.addEventListener('click', () => {
-    currentBanner = (currentBanner - 1 + totalBanners) % totalBanners;
-    updateBanner();
+    bannerContainer.scrollBy({ left: -bannerContainer.offsetWidth, behavior: 'smooth' });
 });
 
-window.addEventListener('resize', updateBanner);
-
-// Modal and ordering logic
+// Logika Modal dan Pemesanan
 function openModal(gameName, gameId) {
     selectedGame = gameName;
     document.getElementById('modalTitle').innerText = `Top Up ${gameName}`;
@@ -181,7 +172,7 @@ function openModal(gameName, gameId) {
         for (const category in gameOptions) {
             const title = category.replace(/_/g, ' ');
             const categoryTitle = document.createElement('h3');
-            categoryTitle.className = "text-xl font-bold mt-4 mb-2 text-gray-900";
+            categoryTitle.className = "text-xl font-bold mt-4 mb-2 text-white";
             categoryTitle.innerText = title;
             optionsContainer.appendChild(categoryTitle);
 
@@ -202,9 +193,9 @@ function openModal(gameName, gameId) {
 }
 
 function createOptionButton(option) {
-    const button = document.createElement('button');
-    button.innerHTML = `<span class="block text-sm font-semibold">${option.nominal}</span><span class="block text-xs text-gray-600">${option.price}</span>`;
-    button.className = "w-full p-4 bg-gray-100 rounded-lg text-center hover:ring-2 hover:ring-blue-400 transition-all focus:outline-none focus:ring-2 focus:ring-blue-400";
+    const button = document.createElement('div');
+    button.className = "price-box";
+    button.innerHTML = `<p class="font-semibold text-white">${option.nominal}</p><p class="text-xs text-sky-200">${option.price}</p>`;
     button.onclick = () => selectOption(option.nominal, option.price, button);
     return button;
 }
@@ -214,11 +205,11 @@ function closeModal() {
 }
 
 function selectOption(nominal, price, button) {
-    const buttons = document.querySelectorAll('#optionsContainer button');
+    const buttons = document.querySelectorAll('.price-box');
     buttons.forEach(btn => {
-        btn.classList.remove('ring-2', 'ring-blue-400');
+        btn.classList.remove('selected');
     });
-    button.classList.add('ring-2', 'ring-blue-400');
+    button.classList.add('selected');
     
     selectedNominal = nominal;
     selectedPrice = price;
@@ -253,9 +244,9 @@ function showMessageBox(message) {
     const modal = document.createElement('div');
     modal.className = "modal";
     modal.innerHTML = `
-        <div class="modal-content max-w-sm">
-            <span class="close-btn">&times;</span>
-            <p class="text-gray-800 text-center">${message}</p>
+        <div class="modal-content bg-gradient-to-br from-blue-500 to-indigo-600 text-white max-w-sm">
+            <span class="close-btn text-white">&times;</span>
+            <p class="text-white text-center">${message}</p>
         </div>
     `;
     document.body.appendChild(modal);
@@ -276,7 +267,7 @@ function showMessageBox(message) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Set social media links
+    // Mengatur tautan media sosial
     document.getElementById('instagram-link').href = socialLinks.instagram;
     document.getElementById('tiktok-link').href = socialLinks.tiktok;
     document.getElementById('facebook-link').href = socialLinks.facebook;
