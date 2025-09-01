@@ -1,301 +1,53 @@
+/*
+ * Diamond Zone - Custom Styles
+ * * This file contains custom CSS rules for the Diamond Zone website.
+ * It's used in conjunction with Tailwind CSS to define the overall look and feel.
+ */
+
+/* Font and Background */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1A0A3A 0%, #0D051A 100%);
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    /* This gradient gives the modern and attractive background */
+    background-image: linear-gradient(to bottom right, #eef2ff, #a797ff);
+    color: #1f2937;
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+/* Navbar Links */
+.nav-link {
+    color: #4b5563; /* text-gray-600 */
+    transition: color 0.3s ease;
 }
 
-.flex {
-    display: flex;
-}
-.justify-between {
-    justify-content: space-between;
-}
-.items-center {
-    align-items: center;
+.nav-link:hover {
+    color: #1f2937; /* hover:text-gray-900 */
 }
 
-.header {
-    background-color: rgba(15, 5, 26, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 20px 0;
-    border-bottom: 2px solid #a361ff;
-    box-shadow: 0 4px 15px rgba(163, 97, 255, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-.store-name {
-    margin: 0;
-    font-size: 2.2rem;
-    color: #a361ff;
-    font-weight: 700;
-}
-
-.nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 1rem;
-    position: relative;
-    transition: color 0.3s;
-}
-
-.nav a:hover {
-    color: #a361ff;
-}
-
-.nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    display: block;
-    margin-top: 5px;
-    right: 0;
-    background: #a361ff;
-    transition: width 0.3s cubic-bezier(0.87, 0, 0.13, 1);
-}
-
-.nav a:hover::after {
-    width: 100%;
-    left: 0;
-    background: #a361ff;
-}
-
-/* Banner Section */
-.banner-section {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 40px;
-    border-radius: 15px;
-}
-
-.slider-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
-
-.slider img {
-    width: 100%;
-    flex-shrink: 0;
-    border-radius: 15px;
-}
-
-.slider-prev, .slider-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.slider-prev {
-    left: 10px;
-}
-
-.slider-next {
-    right: 10px;
-}
-
-.slider-prev:hover, .slider-next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-#star-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+/* Card Styling */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
     overflow: hidden;
 }
 
-.star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5);
-    animation: shooting-star linear infinite;
-}
-
-@keyframes shooting-star {
-    0% { transform: translateX(0) translateY(0); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateX(200px) translateY(200px); opacity: 0; }
-}
-
-
-.main-content {
-    padding: 40px 0;
-}
-
-.section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
-    color: #a361ff;
-    font-weight: 700;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: #a361ff;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-.game-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.game-card {
-    background-color: #1a0a3a;
-    border-radius: 15px;
-    overflow: hidden;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 250px;
-    padding: 15px;
-}
-
-.game-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-}
-
-.game-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.game-card h3 {
-    margin: 15px 0 0;
-    font-size: 1.25rem;
-    color: #fff;
-    font-weight: 600;
-}
-
-.about-us, .contact-us, .payments {
-    background-color: #1a0a3a;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    margin-top: 40px;
-}
-
-.about-us p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #e0e0e0;
-}
-
-/* Payment Section */
-.payment-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-.payment-logo {
-    width: 100px;
-    height: auto;
-    filter: grayscale(0%) brightness(1.2);
-    transition: transform 0.3s;
-}
-.payment-logo:hover {
-    transform: scale(1.1);
-}
-
-.social-media-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.social-button:hover {
+.card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.whatsapp-button {
-    background: #25d366;
-}
-.instagram-button {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-.tiktok-button {
-    background: #000;
+/* WhatsApp Button */
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
-.social-button img {
-    width: 24px;
-    height: 24px;
+.whatsapp-btn:hover {
+    background-color: #128C7E;
 }
 
-
-/* Modal Styling */
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -305,132 +57,51 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(0,0,0,0.8);
 }
 
 .modal-content {
-    background-color: #1a0a3a;
+    background-color: #ffffff;
     margin: 15% auto;
-    padding: 30px;
-    border-radius: 20px;
-    border: 2px solid #a361ff;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    position: relative;
-    animation: fadeIn 0.4s;
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 90%;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    color: #1f2937;
 }
 
-.close-button {
-    color: #fff;
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 2.5rem;
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
 }
 
-.close-button:hover,
-.close-button:focus {
-    color: #a361ff;
-}
-
-#modal-title {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #a361ff;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-#price-list h4 {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #a361ff;
-}
-
-#price-list p {
-    background-color: #2a144a;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 500;
-    border: 1px solid rgba(163, 97, 255, 0.2);
-    transition: background-color 0.2s;
-    font-size: 1rem;
-}
-
-#price-list p:hover {
-    background-color: #3e1e6a;
-}
-
-#price-list hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(163, 97, 255, 0.75), rgba(255, 255, 255, 0));
-    margin: 20px 0;
-}
-
-.whatsapp-button {
-    background: #25d366;
-    border: none;
-    color: white;
-    padding: 15px;
-    text-align: center;
+.close-btn:hover,
+.close-btn:focus {
+    color: #333;
     text-decoration: none;
-    display: block;
-    font-size: 1rem;
-    border-radius: 30px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: background 0.3s;
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
 }
 
-.whatsapp-button:hover {
-    background: #128c7e;
+/* Social Links */
+.social-link {
+    color: #4b5563; /* text-gray-600 */
+    transition: color 0.3s ease;
 }
 
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.social-link:hover {
+    color: #1f2937; /* hover:text-gray-900 */
 }
 
-@media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .nav {
-        margin-top: 15px;
-    }
-    .game-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .game-card {
-        width: 80%;
-        max-width: 300px;
-    }
-    .payment-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .payment-logo {
-        width: 80px;
-    }
+/* Banner Carousel */
+#banner-container {
+    width: 200%; /* For two banners to be side-by-side */
 }
+
